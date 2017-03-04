@@ -5,8 +5,8 @@ function xgithub_shortcode( $atts )
 	
     extract( shortcode_atts( array(
 		'raw' => 'my-wp-code-snippets/master/default.php',
-	    'lang' => 'code',
-	    'light' => '1'
+		'lang' => 'code',
+		'light' => '1'
 	), $atts ) );
 	$raw = "https://raw.githubusercontent.com/davros1973/$raw";
 	$colorboxID = trim(strval(uniqid()));
