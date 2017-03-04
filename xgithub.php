@@ -24,18 +24,20 @@ add_shortcode('xgithub', 'xgithub_shortcode');
 // square bracket functions to prevent other shortcodes in the source file from being evaluated!
 function x_squarebrackets_to_htmlentities( $input)
 {
-	$guid = 'f4cd1bfaa3fa49b28'.'984c326ab9b36d9';
-	$step1 = str_replace('[',$guid, $input);
-	$step2 = str_replace(']',$guid, $step1);
+	$guid1 = 'f4cd1bfaa3fa49b28'.'984c326ab9b36d9';
+  	$guid2 = '984c326ab9b36d9'.'f4cd1bfaa3fa49b28';
+	$step1 = str_replace('[',$guid1, $input);
+	$step2 = str_replace(']',$guid2, $step1);
 						   
 	return $step2;
 }
 
 function x_htmlentities_to_squarebrackets( $step2)
 {
-  	$guid = 'f4cd1bfaa3fa49b28'.'984c326ab9b36d9';
- 	$step3 = str_replace($guid,'[', $step2);
-	$step4 = str_replace($guid,']', $step3);
+  	$guid1 = 'f4cd1bfaa3fa49b28'.'984c326ab9b36d9';
+	$guid2 = '984c326ab9b36d9'.'f4cd1bfaa3fa49b28';
+ 	$step3 = str_replace($guid1,'[', $step2);
+	$step4 = str_replace($guid2,']', $step3);
   
 	return $step4;
 }
