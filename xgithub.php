@@ -12,8 +12,8 @@ function xgithub_shortcode( $atts )
 	$colorboxID = trim(strval(uniqid()));
   
 	$github = x_squarebrackets_to_htmlentities(do_shortcode(" [github raw=$raw] "));
-	$syntax = apply_filters('the_content', "[$lang title=$raw classname=\"BigCode\" light=$light ] $github [/$lang]" );
-	$wrap = '<div class="MyCodeStyle MyCodeWidth MyCodeButtons"><div id="wp_colorbox_'.$colorboxID.'">'.$syntax.'</div>&nbsp;</div>';
+	$syntax = apply_filters('the_content', "[$lang title=$raw classname=\"xarta-big-code\" light=$light ] $github [/$lang]" );
+	$wrap = '<div class="xarta-code-style xarta-code-width xarta-code-buttons"><div id="wp_colorbox_'.$colorboxID.'">'.$syntax.'</div>&nbsp;</div>';
 	$start = '<p style="clear:both;">...</p><p><span style="float:right;"> ';
 	$colorbox = do_shortcode($start . ' [wp_colorbox_media url="#wp_colorbox_'.$colorboxID.'" type="inline" hyperlink="" alt="CODE ZOOM"] ' . "</span><p>$wrap");
   
