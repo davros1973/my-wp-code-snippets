@@ -25,17 +25,17 @@ add_shortcode('xgithub', 'xgithub_shortcode');
 function x_squarebrackets_to_htmlentities( $input)
 {
 	$guid = 'f4cd1bfaa3fa49b28'.'984c326ab9b36d9';
-	$output = str_replace('[',$guid, $input);
-	$output = str_replace(']',$guid, $output);
+	$step1 = str_replace('[',$guid, $input);
+	$step2 = str_replace(']',$guid, $step1);
 						   
-	return $output;
+	return $step2;
 }
 
-function x_htmlentities_to_squarebrackets( $input)
+function x_htmlentities_to_squarebrackets( $step2)
 {
   	$guid = 'f4cd1bfaa3fa49b28'.'984c326ab9b36d9';
- 	$output = str_replace($guid,'[', $input);
-	$output = str_replace($guid,']', $output);
+ 	$step3 = str_replace($guid,'[', $step2);
+	$step4 = str_replace($guid,']', $step3);
   
-	return $output;
+	return $step4;
 }
